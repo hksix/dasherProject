@@ -1,0 +1,42 @@
+{{!--this form allows users to edit/resubmit new user preferences--}}
+<div class='settings'>
+    {{#with user}}
+    <form class="form" method="post">
+        
+        Username:
+        <h3>{{username}}</h3>
+            {{!-- <input class="textArea" type="text" readonly="readonly" name="username" value={{username}}><br> --}}
+            <br>
+       Nickname:
+            <input class="textArea" type="text" name="nickname" value={{nickname}}><br>
+        <br>
+        Birthday:
+            <div class="birthday" name="birthday" value={{birthday}}>
+                <input id="day" type="tel" maxlength="2" placeholder="DD"/> /              
+                <input id="month" type="tel" maxlength="2" placeholder="MM"/>/
+                <input id="year" type="tel" maxlength="4" placeholder="YYYY"/>
+            </div>
+        <br>
+        Location:
+            <input class="textArea" type="text" name="location" value={{location}}><br>
+        <br>
+        Temperature:
+            Celcius:<input class="celcius" type="radio" name="temp" value={{temp}}>
+            Fahrenheit:<input class="fahrenheit" type="radio" name="temp" value={{temp}}><br>
+        <br>
+        Reminder:
+            <input class="reminder" type="text" name="reminder" value='{{reminder}}'><br>
+        <br>
+        <button class="submitbtn" type="submit" value="Submit"><span>Submit</span></button>
+    </form>
+    <form class="form" method="post">
+        <button class='resetbtn' type="submit" name='reset' value="Reset">Reset</button>     
+        {{!-- <input type='hidden' value='reset' name="reset"> --}}
+    </form> 
+    {{/with}}
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="/javascripts/jquery.flip.min.js"></script>
+<script src="/javascripts/main.js"></script>
