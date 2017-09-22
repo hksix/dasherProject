@@ -274,14 +274,22 @@ function secretMessage(){
     var $front = $(".container").children();
     $front.removeClass(); //removes class
     $front.addClass('momentoftruth');
-    $('#box1').html('Kayleigh');
-    $('#box2').html('Elizabeth');
+    $('#box1').addClass('fadefirst');
+    $('#box2').addClass('fadefirst');
+    $('#box3').addClass('fadefirst');
+    $('#box1').html('Kayleigh')
+    $('#box2').html('Elisabeth');
     $('#box3').html('Hatch');
-    $('#box4').html('I love you more than life itself');
-    $('#box5').html('I cant see my life without you and I want to spend every waking minute with you');
-    $('#box6').html('Will');
-    $('#box7').html('You');
-    $('#box8').html('Marry me?');
+    $('#box4').addClass('fadesecond');
+    $('#box4').html('I love you more than life itself.');
+    $('#box5').addClass('fadethird');
+    $('#box5').html('I cant see my life without you and I want to spend every waking minute with you.');
+    $('#box6').addClass('fadelast');
+    $('#box7').addClass('fadelast');
+    $('#box8').addClass('fadelast');
+    $('#box6').html('Will you');
+    $('#box7').html('marry');
+    $('#box8').html('me?');
 }
 secretMessage()
 

@@ -349,21 +349,82 @@ a {
   width:10px;
   height: 10px;
 }
+@keyframes topFadeOut {
+  0% {
+    /* position: absolute; */
+    top: -3rem;
+    opacity: 0;
+  }
+
+  75% {
+    /* position: absolute; */
+    top: 0px;
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  45% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
 
 .momentoftruth{
   /* font-size:100px; */
-  font-family:impact;
+  font-family:Georgia;
   /* border: 3px solid cyan; */
-  font-size: 300%;
+  font-size: 400%;
   text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
-	
+
  -webkit-text-fill-color: transparent;
  background: -webkit-linear-gradient(transparent, transparent),
              url(https://media.giphy.com/media/3ohhwNqFMnb7wZgNnq/giphy.gif) repeat;
  background: -o-linear-gradient(transparent, transparent);
  -webkit-background-clip: text;
+
+}
+.fadefirst{
+  opacity: 1;
+  animation-name: topFadeOut;
+  animation-duration: 5s;
+
+}
+.fadesecond{
+  opacity: 0;
+  animation-fill-mode: forwards;  
+  animation-name: fadeIn;
+  animation-delay: 5s;
+  animation-duration: 5s;
+}
+
+.fadethird{
+  opacity: 0;
+  animation-fill-mode: forwards;  
+  animation-name: fadeIn;
+  animation-delay: 8s;
+  animation-duration: 5s;
+}
+
+.fadelast{
+  opacity: 0;
+  animation-fill-mode: forwards;  
+  animation-name: fadeIn;
+  animation-delay: 10s;
+  animation-duration: 5s;
 
 }
