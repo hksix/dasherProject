@@ -382,9 +382,7 @@ a {
 
 
 .momentoftruth{
-  /* font-size:100px; */
   font-family:Georgia;
-  /* border: 3px solid cyan; */
   font-size: 400%;
   text-align: center;
   display: flex;
